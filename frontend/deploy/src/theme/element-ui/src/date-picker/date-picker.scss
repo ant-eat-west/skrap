@@ -1,0 +1,10 @@
+@import "../common/var";
+@import "element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "./picker-panel.scss";
+
+@include b(date-picker) {
+    @include e(header-label) {
+        font-size: $--font-size-base;
+        color: $--color-text-primary;
+    }
+}

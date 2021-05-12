@@ -1,0 +1,127 @@
+{
+    "id": "0",
+    "type": "page",
+    "label": "页面",
+    "name": "page",
+    "options": {
+        "type": "one-screen-layout"
+    },
+    "datasources": [{
+        "id": "ds1",
+        "label": "数据源1",
+        "type": "ds",
+        "filterName": "form1",
+        "sql": "select create_date, {colPiece}, sum(tab_name) as 'cnt' from dacp_meta_tab where 1=1 {condiPiece} {groupPiece}",
+        "columns": [{
+            "name": "CREATE_DATE",
+            "label": "CREATE_DATE"
+        }, {
+            "name": "TEAM_NAME",
+            "label": "TEAM_NAME"
+        }, {
+            "name": "LVL",
+            "label": "LVL"
+        }, {
+            "name": "CNT",
+            "label": "CNT"
+        }],
+        "widgets": ["table1"]
+    }],
+    "children": [{
+        "id": 1,
+        "label": "表单1",
+        "type": "form",
+        "name": "form1",
+        "models": {
+            "CREATE_DATE": null,
+            "TEAM_NAME": null,
+            "LVL": null
+        },
+        "children": [{
+            "id": 1,
+            "label": "日期",
+            "type": "date-picker",
+            "name": "CREATE_DATE",
+            "options": {
+                "type": "date",
+                "placeholder": "请选择日期",
+                "clearable": true,
+                "editable": false,
+                "startPlaceholder": "请选择日期",
+                "endPlaceholder": "请选择日期",
+                "format": "yyyy-MM-dd",
+                "valueFormat": "yyyy-MM-dd",
+                "align": "left",
+                "popperClass": "",
+                "pickerOptions": {},
+                "rangeSeparator": "-",
+                "defaultValue": null,
+                "defaultTime": null,
+                "prefixIcon": "el-icon-date",
+                "clearIcon": "el-icon-circle-close"
+            }
+        }, {
+            "id": 3,
+            "label": "团队",
+            "type": "select",
+            "name": "TEAM_NAME",
+            "options": {
+                "options": [],
+                "optionsType": "dynamic",
+                "dynamicType": "sql",
+                "optionsMethod": "select team_name as value, label from dacp_meta_team",
+                "clearable": true,
+                "subdivision": true,
+                "subdivisionVal": false,
+                "subdivisionSql": "case when team_name is null then 'total' else team_name end as team_name"
+            }
+        }, {
+            "id": 4,
+            "label": "层级",
+            "type": "select",
+            "name": "LVL",
+            "options": {
+                "options": [],
+                "optionsType": "dynamic",
+                "dynamicType": "sql",
+                "optionsMethod": "select team_name as value, label from dacp_meta_team",
+                "clearable": true,
+                "subdivision": true,
+                "subdivisionVal": false,
+                "subdivisionSql": "case when lvl is null then 'total' else lvl end as lvl"
+            }
+        }, {
+            "id": 10,
+            "label": "查询",
+            "type": "button",
+            "name": "button1",
+            "class": "form-button",
+            "labelWidth": "0px",
+            "options": {
+                "type": "query"
+            }
+        }]
+    }, {
+        "id": 2,
+        "label": "表格1",
+        "type": "table",
+        "name": "table1",
+        "options": {
+            "data": [],
+            "fields": [{
+                "name": "CREATE_DATE",
+                "label": "时间"
+            }, {
+                "name": "TEAM_NAME",
+                "label": "团队"
+            }, {
+                "name": "LVL",
+                "label": "层次"
+            }, {
+                "name": "CNT",
+                "label": "模型总数"
+            }],
+            "ds": "ds1"
+        }
+    }]
+}

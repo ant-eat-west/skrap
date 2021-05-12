@@ -1,0 +1,86 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/central/' }
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.4.5")
+    }
+
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'java-library'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.boot:spring-boot-dependencies:2.4.5"
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group 'io.github.skrap'
+version '1.0.0'
+
+repositories {
+    mavenLocal()
+    maven { url 'http://maven.aliyun.com/nexus/content/repositories/central/' }
+    jcenter()
+    mavenCentral()
+}
+
+
+dependencies {
+
+
+    implementation "org.slf4j:slf4j-api:1.7.30"
+    implementation "ch.qos.logback:logback-classic:1.2.3"
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'org.apache.avro:avro:1.10.2'
+    implementation 'org.apache.avro:avro-compiler:1.10.2'
+
+    implementation "io.springfox:springfox-swagger2:2.10.5"
+    implementation "io.springfox:springfox-swagger-ui:2.10.5"
+    implementation "io.springfox:springfox-spring-webmvc:2.10.5"
+
+
+
+    String _lombok = "org.projectlombok:lombok:1.18.20"
+    annotationProcessor _lombok
+    testAnnotationProcessor _lombok
+    compileOnly _lombok
+    testCompileOnly _lombok
+
+    implementation 'mysql:mysql-connector-java:5.1.47'
+    implementation 'org.hibernate:hibernate-entitymanager:5.4.31.Final'
+    implementation 'org.springframework:spring-core:5.3.6'
+    implementation 'org.springframework.data:spring-data-jpa:2.5.0'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    testImplementation ("junit:junit:4.13.2")
+    testImplementation 'org.springframework.boot:spring-boot-devtools'
+
+    testImplementation (
+            "org.springframework:spring-test:5.3.6",
+            "org.springframework.boot:spring-boot-test:2.4.5",
+            "org.springframework.boot:spring-boot-test-autoconfigure:2.4.5"
+//            "javax.servlet:javax.servlet-api:4.0.1"//测试时build报错缺javax.servlet.*，但compile不报错
+    )
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+

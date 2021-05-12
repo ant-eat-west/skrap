@@ -1,0 +1,7 @@
+@import "../common/var";
+
+@include b(time-panel) {
+    .popper__arrow {
+        display: none !important;
+    }
+}

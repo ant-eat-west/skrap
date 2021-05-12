@@ -1,0 +1,14 @@
+.action-attr {
+	width: 320px;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    top: 0px;
+    left: -320px;
+    background: #fff;
+    padding: 10px;
+    z-index: 1000;
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    box-shadow: -5px 0px 8px #d3d3d3;
+}

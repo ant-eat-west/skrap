@@ -1,0 +1,202 @@
+@import "deploy/src/theme/common/prd-color-var.scss";
+@import "deploy/src/theme/common/size-var.scss";
+
+.elx-table-layout {
+	width: 100%;
+	height: 100%;
+	.elx-footer,
+	.elx-header,
+	.elx-scroll-content {
+	    padding: 0px;
+	}
+	.el-pagination .el-select .el-input--mini .el-input__inner {
+	    height: 30px;
+	    line-height: 30px;
+	    border-radius: 1px;
+	}
+	.filter {
+    	// height: $--larger-height;
+    	padding: 0px;
+    	padding-bottom: 0px;
+    	display: flex;
+    	position: relative;
+    	background-color: $--color-white;
+    	.pos-left {
+    		flex: 1;
+    		margin-right: 20px;
+    		>form {
+	    		display: inline-block;
+	    		vertical-align: top;
+	    	}
+    	}
+    	.pos-right {
+    		padding: 10px 20px;
+    		padding-bottom: 9px;
+    		position: relative;
+    		.el-input {
+    			width: 168px;
+    			font-size: 12px;
+    			padding-left: 20px;
+    			vertical-align: top;
+    			&:first-child:before {
+				    content: '';
+				    position: absolute;
+				    content: '';
+				    top: 6px;
+				    left: 0px;
+				    width: 1px;
+				    height: 18px;
+				    background: #eaeaea;
+				}
+    		}
+    		ul.switch-button-group {
+			    display: inline-flex;
+			    width: $--height * 2;
+			    margin-left: 18px;
+    			li {
+				    width: $--height;
+				    height: $--height;
+				    text-align: center;
+				    line-height: $--height - 2;
+				    color: $--icon-color;
+				    border: 1px solid $--border-color-base;
+				    cursor: pointer;
+				    transition: .1s;
+				    &:first-child {
+					    border-right: 0px;
+					    border-radius: 1px 0px 0px 1px;
+					    &:hover {
+					    	border-color: $--color-dark;
+					    	color: $--color-text-primary;
+					    }
+					}
+					&:last-child {
+					    border-left: 0px;
+					    border-radius: 0px 1px 1px 0px;
+					    &:hover {
+					    	color: $--color-text-primary;
+					    	border-color: $--color-dark;
+					    }
+					}
+					&.active {
+					    color: $--color-text-primary;
+					    border: 1px solid $--color-dark;
+					}
+				}
+			}
+    	}
+	}
+	.split {
+		height: $--split-size;
+		background: $--split-color;
+	}
+	.elx-scroll-content {
+		>div {
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+    		margin-bottom: 0px;
+    	}
+    	&.table {
+			.el-table::before {
+				height: 0px;
+			}
+			.el-table {
+				th:first-child {
+					& > .cell {
+					    padding-left: 20px;
+					    padding-right: 18px;
+					}
+					& > div {
+	    				padding: 0 20px;
+	    				padding-right: 18px;
+					}
+				}
+				td:first-child>.cell {
+    				padding: 0 20px;
+    				padding-right: 18px;
+				}
+			}
+		}
+	}
+	.footer {
+		height: $--larger-height;
+		padding: 9.5px 20px;
+		border-top: 1px solid rgba($--color-text-ignore, 0.25);
+		display: flex;
+		background: $--color-white;
+		.pos-left {
+    		flex: 1;
+    		.el-checkbox {
+    			color: $--color-text-primary;
+			    display: inline-block;
+			    font-weight: 400;
+			}
+			span.text {
+				padding-right: 18px;
+				margin-left: 10px;
+			    margin-right: 18px;
+				border-right: 1px solid $--border-color-base;
+			}
+			.el-select.oper-group {
+			    display: inline-block;
+			    width: 140px;
+			}
+			.el-pagination {
+				.btn-next,
+				.btn-prev {
+				    padding-right: 12px;
+				    width: 30px;
+				    height: 30px;
+				    min-width: 30px;
+				    border: 1px solid #eaeaea;
+				    padding: 0px;
+				    padding-left: 0px;
+				}
+				.btn-prev {
+					border-right: 0px;
+				}
+				.el-pager {
+					display: none
+				}
+				.el-pagination__editor.el-input {
+				    width: 30px;
+				    height: 30px;
+				    padding: 0px;
+				    line-height: 28px;
+				    .el-input__inner {
+    					height: 30px;
+					}
+				}
+			}
+    	}
+		.pos-right {
+			width: 103px;
+			line-height: $--height;
+			.el-button {
+				width: 100%;
+				border-color: $--border-color-base;
+				.icon {
+					color: $--icon-color;
+					font-size: $--font-size-small;
+				}
+				&:active, &:focus {
+    				color: $--color-text-primary;
+    				border-color: $--border-color-base;
+    				background: #fff;
+    				.icon {
+						color: $--icon-color;
+					}
+				}
+				&:hover, &.active {
+					background: $--color-pp-10;
+					border: 1px solid $--color-pp-10;
+					color: $--color-primary;
+					.icon {
+						color: $--color-primary;
+					}
+				}
+			}
+		}
+	}
+}

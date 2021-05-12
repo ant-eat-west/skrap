@@ -1,0 +1,29 @@
+@import "deploy/src/theme/common/prd-color-var.scss";
+
+span.el-tag {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.datasource-attr {
+    .title {
+        line-height: 20px;
+        margin-bottom: 10px;
+        i.ri-add-circle-fill {
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+    /deep/ form.el-form {
+        background: #fafafa;
+        padding: 10px;
+    }
+    /deep/ .el-table .cell {
+        line-height: 32px;
+    }
+}
+i.ri-refresh-fill {
+    cursor: pointer;
+    &:before {
+        vertical-align: bottom;
+    }
+}

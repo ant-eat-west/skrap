@@ -1,0 +1,19 @@
+.grid-setting {
+    position: relative;
+    i.oper.ri-add-circle-fill {
+	    position: absolute;
+	    top: -30px;
+	    right: 0px;
+	    font-size: 16px;
+	}
+}
+ul.col-setting {
+    margin-top: 10px;
+    li {
+	    margin-bottom: 10px;
+	}
+	i.oper.ri-delete-bin-fill {
+	    margin-left: 10px;
+	    float: right;
+	}
+}

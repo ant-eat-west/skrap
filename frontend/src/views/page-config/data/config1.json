@@ -1,0 +1,250 @@
+{
+    "id": "0",
+    "type": "page",
+    "label": "页面",
+    "name": "page",
+    "options": {
+        "type": "one-screen-layout"
+    },
+    "datasources": [{
+        "id": "ds1",
+        "label": "数据源1",
+        "type": "ds",
+        "filterName": "form1",
+        "sql": "select proc_name, proc_label, ds_name, team_name, remark, create_date from dacp_meta_proc where 1=1 {condiPiece}",
+        "columns": [{
+            "name": "PROC_NAME",
+            "label": "PROC_NAME"
+        }, {
+            "name": "PROC_LABEL",
+            "label": "PROC_LABEL"
+        }, {
+            "name": "DS_NAME",
+            "label": "DS_NAME"
+        }, {
+            "name": "TEAM_NAME",
+            "label": "TEAM_NAME"
+        }, {
+            "name": "REMARK",
+            "label": "REMARK"
+        }, {
+            "name": "CREATE_DATE",
+            "label": "CREATE_DATE"
+        }],
+        "widgets": ["table1"]
+    }],
+    "children": [{
+        "id": 1,
+        "label": "表单区域",
+        "type": "form-region",
+        "name": "form1",
+        "models": {
+            "field4": [],
+            "field5": []
+        },
+        "children": [{
+            "id": 1,
+            "label": "程序英文名",
+            "type": "input",
+            "name": "PROC_NAME",
+            "options": {
+                "type": "text",
+                "placeholder": "请输入文本",
+                "clearable": false
+            }
+        }, {
+            "id": 2,
+            "label": "程序中文名",
+            "type": "input",
+            "name": "PROC_LABEL",
+            "options": {
+                "type": "text",
+                "placeholder": "请输入文本",
+                "clearable": false
+            }
+        }, {
+            "id": 3,
+            "label": "团队",
+            "type": "select",
+            "name": "TEAM_NAME",
+            "options": {
+                "options": [],
+                "optionsType": "dynamic",
+                "dynamicType": "sql",
+                "optionsMethod": "select team_name as value, label from dacp_meta_team"
+            }
+        }, {
+            "id": 4,
+            "label": "测试1",
+            "type": "select",
+            "name": "field1",
+            "options": {
+                "options": [],
+                "optionsType": "dynamic",
+                "dynamicType": "api",
+                "optionsMethod": "/_api/enum/meta:team:tenantDs:scenario"
+            }
+        }, {
+            "id": 5,
+            "label": "测试2",
+            "type": "select",
+            "name": "field2",
+            "options": {
+                "options": [{
+                    "value": "option1"
+                }, {
+                    "value": "option2"
+                }, {
+                    "value": "option3"
+                }],
+                "optionsType": "static"
+            }
+        }, {
+            "id": 6,
+            "label": "日期选择器",
+            "type": "date-picker",
+            "name": "field3",
+            "options": {
+                "type": "date",
+                "placeholder": "请选择日期",
+                "clearable": true,
+                "editable": false,
+                "startPlaceholder": "请选择日期",
+                "endPlaceholder": "请选择日期",
+                "format": "yyyy-MM-dd",
+                "align": "left",
+                "popperClass": "",
+                "pickerOptions": {},
+                "rangeSeparator": "-",
+                "defaultValue": null,
+                "defaultTime": null,
+                "prefixIcon": "el-icon-date",
+                "clearIcon": "el-icon-circle-close"
+            }
+        }, {
+            "id": 7,
+            "label": "多选框组",
+            "type": "checkbox",
+            "name": "field4",
+            "options": {
+                "type": "group",
+                "defaultValue": [],
+                "options": [{
+                    "value": "option1"
+                }, {
+                    "value": "option2"
+                }, {
+                    "value": "option3"
+                }],
+                "optionsType": "static"
+            }
+        }, {
+            "id": 8,
+            "label": "类型",
+            "type": "checkbox",
+            "name": "field5",
+            "options": {
+                "type": "group",
+                "defaultValue": [],
+                "options": [],
+                "optionsType": "dynamic",
+                "dynamicType": "api",
+                "optionsMethod": "/_api/enum/meta:team:tenantDs:scenario"
+            }
+        }, {
+            "id": 9,
+            "label": "",
+            "type": "checkbox",
+            "name": "field6",
+            "options": {
+                "type": "single",
+                "defaultValue": true,
+                "options": [],
+                "label": "细分"
+            }
+        }, {
+            "id": 10,
+            "label": "查询",
+            "type": "button",
+            "name": "button1",
+            "class": "form-button",
+            "labelWidth": "0px",
+            "options": {
+                "type": "query"
+            }
+        }]
+    }, {
+        "id": 2,
+        "label": "表格区域",
+        "type": "table-region",
+        "name": "table1",
+        "options": {
+            "data": [],
+            "fields": [{
+                "name": "PROC_NAME",
+                "label": "程序英文名"
+            }, {
+                "name": "PROC_LABEL",
+                "label": "程序中文名"
+            }, {
+                "name": "TEAM_NAME",
+                "label": "团队"
+            }, {
+                "name": "REMARK",
+                "label": "备注"
+            }, {
+                "name": "CREATE_DATE",
+                "label": "创建日期"
+            }],
+            "ds": "ds1"
+        }
+    }, {
+        "id": 3,
+        "label": "栅格布局",
+        "type": "grid-layout",
+        "name": "grid_layout_0",
+        "options": {
+            "gutter": 5
+        },
+        "children": [{
+            "id": 1,
+            "type": "grid-layout-item",
+            "name": "grid_layout_0_1",
+            "span": 8,
+            "children": []
+        }, {
+            "id": 2,
+            "type": "grid-layout-item",
+            "name": "grid_layout_0_2",
+            "span": 8,
+            "children": []
+        }, {
+            "id": 3,
+            "type": "grid-layout-item",
+            "name": "grid_layout_0_3",
+            "span": 8,
+            "children": []
+        }]
+    }, {
+        "id": 4,
+        "label": "栅格布局",
+        "type": "grid-layout",
+        "name": "grid_layout_1",
+        "options": {
+            "gutter": 5
+        },
+        "children": [{
+            "id": 1,
+            "type": "grid-layout-item",
+            "name": "grid_layout_1_1",
+            "span": 12,
+            "children": []
+        }, {
+            "id": 2,
+            "type": "grid-layout-item",
+            "name": "grid_layout_1_2",
+            "span": 12,
+            "children": []
+        }]
+    }]
+}

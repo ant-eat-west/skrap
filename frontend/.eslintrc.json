@@ -1,0 +1,28 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "eslint-config-ali/vue",
+    "parserOptions": {
+        "parser": "babel-eslint",
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "jsx": true,
+            "objectLiteralComputedProperties": true
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": ["error", 4, { "SwitchCase": 1, "ignoredNodes": ["TemplateLiteral"] }],
+        "comma-dangle": [2, "never"],
+        "no-console": "off",
+        "no-param-reassign": [2, { "props": false }],
+        "max-len": ["error", { "code": 200 }],
+        "prefer-rest-params": 0,
+        "import/prefer-default-export": "off",
+        "space-before-function-paren": 0,
+        "implicit-arrow-linebreak": ["error", "beside"],
+        "template-curly-spacing" : "off"
+    }
+}

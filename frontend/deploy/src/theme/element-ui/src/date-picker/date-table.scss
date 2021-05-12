@@ -1,0 +1,21 @@
+@import "../common/var";
+@import "element-ui/packages/theme-chalk/src/mixins/mixins";
+
+@include b(date-table) {
+    td {
+        & div {
+            height: 28px;
+        }
+        & span {
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+        }
+        &.start-date div {
+            margin-left: 7px;
+        }
+        &.end-date div {
+            margin-right: 6px;
+        }
+    }
+}

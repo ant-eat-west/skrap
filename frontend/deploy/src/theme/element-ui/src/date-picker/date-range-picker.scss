@@ -1,0 +1,15 @@
+@import "../common/var";
+
+@include b(date-range-picker) {
+    @include e(header) {
+        div {
+            font-size: $--font-size-base;
+        }
+    }
+
+    @include e(time-header) {
+        > .el-icon-arrow-right {
+            font-size: $--font-size-base;
+        }
+    }
+}

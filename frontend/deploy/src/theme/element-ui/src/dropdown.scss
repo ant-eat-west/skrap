@@ -1,0 +1,14 @@
+@import "element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "./common/var";
+
+@include b(dropdown-menu) {
+    padding: 0 0;
+    @include e(item) {
+        line-height: $--large-height;
+        padding: 0 15px;
+        border-bottom: 1px solid $--border-color-lighter;
+    }
+    .popper__arrow {
+        display: none !important;
+    }
+}

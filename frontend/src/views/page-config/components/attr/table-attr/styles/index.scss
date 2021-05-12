@@ -1,0 +1,23 @@
+.el-collapse {
+    /deep/ .el-collapse-item__content {
+        padding: 5px;
+    }
+}
+.action-container {
+    margin-bottom: 2px;
+    padding-bottom: 5px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    .el-input {
+        margin-right: 5px;
+    }
+    .oper {
+        margin-right: 5px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .uex-icon-delete {
+        margin-right: 0px;
+    }
+}

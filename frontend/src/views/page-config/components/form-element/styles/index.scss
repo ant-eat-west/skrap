@@ -1,0 +1,66 @@
+@import "deploy/src/theme/common/prd-color-var.scss";
+
+.form.block {
+    height: 100%;
+    overflow: auto;
+    form.el-form {
+        height: 100%;
+        .dragArea.list-group.form {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            .form-drag-container {
+                display: inline-flex;
+                overflow-x: auto;
+                width: 100%;
+                &.button-container {
+                    width: auto !important;
+                    display: inline-block !important;
+                }
+                /deep/.generate-form-item {
+                    width: 100%;
+                }
+                /deep/ .el-form-item__content {
+                    flex: 1;
+                }
+                /deep/ .form-button .el-form-item__label {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.form.inline {
+    form.el-form .dragArea.list-group.form .form-drag-container {
+        width: auto !important;
+        /deep/.generate-form-item {
+            width: auto !important;
+        }
+    }
+}
+.title {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: $--color-info-light;
+    color: white;
+    z-index: 2;
+    font-size: 12px;
+    padding: 0px 5px;
+}
+.oper-button-group {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    vertical-align: top;
+    background: $--color-info-light;
+    color: white;
+    z-index: 10;
+    padding: 2px 5px;
+    display: none;
+}
+.attr-active>.oper-button-group {
+    display: block;
+}

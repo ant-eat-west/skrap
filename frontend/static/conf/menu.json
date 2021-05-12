@@ -1,0 +1,255 @@
+{
+    "code": 200,
+    "message": "",
+    "requestId": "d986368252f746c39ee64338c4599eb2",
+    "success": true,
+    "data": {
+        "menuId": "sys-mgr-r",
+        "menuName": "测试菜单",
+        "menuIcon": "ri-projector-line",
+        "url": "",
+        "children": [
+            {
+                "menuId": "ds-mgr",
+                "menuName": "数据源",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": []
+            },
+            {
+                "menuId": "user-mgr",
+                "menuName": "用户管理",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": []
+            },
+            {
+                "menuId": "dataex",
+                "menuName": "DATAEX",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": [
+                    {
+                        "menuId": "test1",
+                        "menuName": "TEST1",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "menuId": "dataflow-r",
+                "menuName": "DATAFLOW-R",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": [
+                    {
+                        "menuId": "test2",
+                        "menuName": "TEST2",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "menuId": "datage",
+                "menuName": "DATAGE",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": [
+                    {
+                        "menuId": "test3",
+                        "menuName": "TEST3",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    },
+                    {
+                        "menuId": "data-architecture-definiition",
+                        "menuName": "数据架构定义",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    },
+                    {
+                        "menuId": "data-architecture-senslevel",
+                        "menuName": "敏感级别架构设计",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    },
+                    {
+                        "menuId": "data-architecture-design",
+                        "menuName": "数据架构设计",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    },
+                    {
+                        "menuId": "data-architecture-store",
+                        "menuName": "存储架构设计",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "menuId": "datams",
+                "menuName": "DATAMS",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": [
+                    {
+                        "menuId": "test4",
+                        "menuName": "TEST4",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "menuId": "dataps",
+                "menuName": "DATAPS",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": [
+                    {
+                        "menuId": "test5",
+                        "menuName": "TEST5",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    },
+                    {
+                        "menuId": "proc",
+                        "menuName": "程序开发编排",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "menuId": "datastash-r",
+                "menuName": "DATASTASH-R",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": [
+                    {
+                        "menuId": "test6",
+                        "menuName": "TEST6",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "menuId": "kpi",
+                "menuName": "KPI",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": [
+                    {
+                        "menuId": "test7",
+                        "menuName": "TEST7",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "menuId": "team-mgr",
+                "menuName": "团队管理",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": [
+                    {
+                        "menuId": "team-list",
+                        "menuName": "团队列表",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    },
+                    {
+                        "menuId": "team-role",
+                        "menuName": "团队角色",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "menuId": "team-role-manage",
+                "menuName": "团队角色管理",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": []
+            },
+            {
+                "menuId": "menu-mgr-r",
+                "menuName": "菜单管理",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": []
+            },
+            {
+                "menuId": "role-mgr",
+                "menuName": "角色管理",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": []
+            },
+            {
+                "menuId": "test",
+                "menuName": "测试",
+                "menuIcon": "ri-projector-line",
+                "url": "",
+                "children": [
+                    {
+                        "menuId": "baidu",
+                        "menuName": "baidu",
+                        "menuIcon": "ri-projector-line",
+                        "url": "https://www.baidu.com",
+                        "isOuter": true,
+                        "children": []
+                    },
+                    {
+                        "menuId": "table-demo",
+                        "menuName": "table-demo",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    },
+                    {
+                        "menuId": "table-tab-demo",
+                        "menuName": "table-tab-demo",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    },
+                    {
+                        "menuId": "tree-table-demo",
+                        "menuName": "tree-table-demo",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    },
+                    {
+                        "menuId": "tree-table-tab-demo",
+                        "menuName": "tree-table-tab-demo",
+                        "menuIcon": "ri-projector-line",
+                        "url": "",
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}

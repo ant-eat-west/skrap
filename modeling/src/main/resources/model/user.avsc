@@ -1,0 +1,10 @@
+{
+  "namespace": "io.github.goat.model",
+  "javaAnnotation":["javax.persistence.Entity","javax.persistence.Table(name = \"test_user\")"],
+  "type": "record",
+  "name": "User",
+  "fields": [
+    {"name": "id", "type": "string","javaAnnotation":["javax.persistence.Column(name = \"user_id\", length = 32, nullable = false)","javax.persistence.Id"]},
+    {"name": "name", "type": "string","javaAnnotation":["javax.persistence.Column(name =\"name\", length = 128)"]}
+  ]
+} 

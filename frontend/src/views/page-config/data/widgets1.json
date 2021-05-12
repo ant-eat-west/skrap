@@ -1,0 +1,141 @@
+{
+	"layouts": [{
+		"id": 1,
+		"label": "栅格布局",
+		"type": "grid-layout",
+		"options": {
+			"gutter": 5,
+			"height": "200px"
+		},
+		"children": []
+	}],
+	"widgets": [{
+		"id": 1,
+		"label": "表单",
+		"type": "form",
+		"models": {},
+		"children": []
+	}, {
+		"id": 2,
+		"label": "表格",
+		"type": "table",
+		"options": {
+			"data": [],
+			"fields": [],
+			"ds": null
+		}
+	}, {
+		"id": 3,
+		"label": "图形",
+		"type": "graph",
+		"children": []
+	}],
+	"formItems": [{
+		"id": 1,
+		"label": "输入框",
+		"type": "input",
+		"dependent": "form",
+		"options": {
+			"type": "text",
+			"placeholder": "请输入文本",
+			"clearable": false
+		}
+	}, {
+		"id": 2,
+		"label": "选择器",
+		"type": "select",
+		"dependent": "form",
+		"options": {
+			"placeholder": "请选择内容",
+			"clearable": true,
+			"multiple": false,
+			"options": [{
+				"value": "option1"
+			}, {
+				"value": "option2"
+			}, {
+				"value": "option3"
+			}],
+			"optionsType": "static",
+			"dynamicType": "sql",
+			"optionsMethod": "",
+			"subdivision": false,
+			"subdivisionVal": false,
+			"subdivisionSql": ""
+		}
+	}, {
+		"id": 3,
+		"label": "日期选择器",
+		"type": "date-picker",
+		"dependent": "form",
+		"options": {
+			"type": "date",
+			"placeholder": "请选择日期",
+			"clearable": true,
+			"editable": false,
+			"startPlaceholder": "请选择日期",
+			"endPlaceholder": "请选择日期",
+			"format": "yyyy-MM-dd",
+			"valueFormat": "yyyy-MM-dd",
+			"align": "left",
+			"popperClass": "",
+			"pickerOptions": {},
+			"rangeSeparator": "-",
+			"defaultValue": null,
+			"defaultTime": null,
+			"prefixIcon": "el-icon-date",
+			"clearIcon": "el-icon-circle-close"
+		}
+	}, {
+		"id": 4,
+		"label": "按钮",
+		"type": "button",
+		"dependent": "form",
+		"class": "form-button",
+		"labelWidth": "0px",
+		"options": {
+			"click": "",
+			"type": "query"
+		}
+	}, {
+		"id": 5,
+		"label": "级联选择器",
+		"type": "cascader",
+		"dependent": "form"
+	}, {
+		"id": 6,
+		"label": "时间选择器",
+		"type": "time-picker",
+		"dependent": "form"
+	}, {
+		"id": 7,
+		"label": "日期时间选择器",
+		"type": "date-time-picker",
+		"dependent": "form"
+	}, {
+		"id": 8,
+		"label": "单选框",
+		"type": "radio",
+		"dependent": "form"
+	}, {
+		"id": 9,
+		"label": "多选框组",
+		"type": "checkbox",
+		"dependent": "form",
+		"options": {
+			"type": "group",
+			"label": "",
+			"defaultValue": [],
+			"options": [{
+				"value": "option1"
+			}, {
+				"value": "option2"
+			}, {
+				"value": "option3"
+			}],
+			"optionsType": "static",
+			"dynamicType": "sql",
+			"optionsMethod": ""
+		}
+	}]
+}

@@ -1,0 +1,39 @@
+.select-options {
+    .el-radio {
+        margin-right: 0px;
+        &.is-bordered {
+            line-height: 24px;
+        }
+    }
+}
+li {
+    &.show-label {
+        margin-top: 5px;
+    }
+    &.select-option /deep/ {
+        margin-top: 5px;
+        display: inline-flex;
+        width: 100%;
+        &.only-value span.el-checkbox__label input.el-input__inner {
+            width: 185px;
+        }
+        .el-input.el-input--suffix {
+            margin-right: 5px;
+        }
+        i.ri-drag-move-2-line {
+            line-height: 30px;
+            font-size: 16px;
+        }
+        i.ri-delete-bin-fill {
+            line-height: 30px;
+            font-size: 16px;
+        }
+    }
+}
+
+.el-radio-group.dynamic-group {
+    margin: 10px 0px;
+    label.el-radio {
+        margin-right: 20px;
+    }
+}

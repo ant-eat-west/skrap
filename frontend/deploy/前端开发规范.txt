@@ -1,0 +1,142 @@
+1、分模块部署
+
+    主仓库子仓库分模块部署
+
+    dacp-framework-web 主仓库
+    └── conf
+        ├── dev-service-config.json  开发环境下子仓库业务线主文件路径
+        └── prod-service-config.json   生产环境下子仓库业务线主文件路径
+
+    主仓库读取配置文件后加载各个子仓库的主文件后，子仓库主文件将自己仓库中的路由和store注册到主仓库中
+
+
+    dev-service-config.json例子
+    {
+	    "datasource": {
+	    	"src": ["http://localhost:8000/js/datasource.min.js"]
+	    },
+	    "frame-front": {
+	    	"src": ["http://localhost:8002/js/frame-front.min.js"]
+	    }
+	}
+
+	prod-service-config.json例子
+	{
+	    "datasource": {
+	    	"src": ["/datasource/js/datasource.min.js"]
+	    },
+	    "frame-front": {
+	    	"src": ["/frame-front/js/frame-front.min.js"]
+	    }
+	}
+
+2、.vue文件代码格式
+
+	<component-template>
+	    将.vue文件中的<template>替换为<component-template>
+	</component-template>
+
+	<script>
+	</script>
+
+	<style scoped>
+	</style>
+
+	<component-name>
+	    为组件的name和componentName
+	</component-name>
+
+	<component-comment>
+	    为组件的中文说明
+	</component-comment>
+
+	标签个性化用于二次开发
+	template -> component-template
+	component-name
+	component-comment
+
+	component-template中dom属性全部换行
+
+3、样式规范、主题
+
+	引入全局变量，不要自创，保证ui统一
+
+3、http
+
+	（1）post请求 统一拦截
+	（2）message 统一拦截
+	（3）http报错统一拦截
+
+4、路由配置
+
+	moduleRoutes.js
+		ds-mgr
+
+	processModuleRoutes.js 将模块路由统一处理
+		frame/meta/ds-mgr
+		view/meta/ds-mgr
+
+5、懒加载
+
+6、http代理
+
+	webpack.dev.conf.js
+
+    {
+        devServer: {
+            proxy: {
+                '/metamodel': 'http://192.168.1.128:8080',
+                '_api/meta/role': 'http://yapi.demo.qunar.com/mock/56436',
+                '_api/meta/team': 'http://yapi.demo.qunar.com/mock/51023'
+            }
+        }
+    }
+
+7、二次开发
+	webpack 根据 .vue文件tag名，生成组件说明文档。
+
+	交付后，可进行二次开发，例plugin>dsCreate.js
+
+	读取plugin-config配置文件，加载二次开发代码资源
+
+8、埋点说明
+
+	Sentry.init({
+	    dsn: 'http://0f134fac1add49b08464e7a2e3b900db@192.168.1.217:9000/2',
+	    integrations: [new Integrations.Vue({ Vue, attachProps: true })]
+	});
+	全局报错
+	(1)、http报错日志
+	(2)、js代码执行报错日志
+
+	增加日志
+	首屏性能日志
+	route日志
+
+9、submodule 子仓库
+
+	使用submodule，引入element-uex仓库或者其他公司工程仓库，也方便与node_module进行分类
+
+	不用上传npm，不用在package.json中写仓库包git地址
+
+10、代码检查 eslint
+
+	保证代码符合要求，整齐统一
+
+11、单元测试
+
+	karma
+
+12、http测试
+
+	yapi
+
+13、返回数据规范
+
+	{
+		code: 200
+		success: true,
+		data: ..,
+		message: ..., //业务异常描述信息
+		devMsg: ...  //调试异常信息
+	}

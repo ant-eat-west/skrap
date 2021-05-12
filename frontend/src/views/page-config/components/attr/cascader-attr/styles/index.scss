@@ -1,0 +1,16 @@
+.cascader-attr {
+	/deep/ .el-tree-node__content {
+		height: auto;
+	}
+	/deep/ span.custom-tree-node {
+	    width: 254px;
+	    display: flex;
+	    margin-top: 5px;
+	    .el-input {
+	    	margin-right: 5px;
+	    }
+	    span {
+		    line-height: 30px;
+		}
+	}
+}

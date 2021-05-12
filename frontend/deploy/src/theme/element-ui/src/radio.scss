@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import "./common/var";
+@import "./mixins/button";
+@import "element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "element-ui/packages/theme-chalk/src/mixins/utils";
+
+@include b(radio) {
+    @include when(bordered) {
+        line-height: $--radio-bordered-height - 4;
+    }
+    @include m(medium) {
+        &.is-bordered {
+            line-height: $--radio-bordered-medium-height - 4;
+        }
+    }
+    @include m(small)  {
+        &.is-bordered {
+            line-height: $--radio-bordered-small-height - 4;
+        }
+    }
+    @include m(mini) {
+        &.is-bordered {
+            line-height: $--radio-bordered-mini-height - 4;
+            .el-radio__input {
+                font-size: $--button-mini-font-size;;
+            }
+        }
+
+    }
+    @include e(inner) {
+        vertical-align: top;
+    }
+    @include e(label) {
+        vertical-align: middle;
+    }
+}

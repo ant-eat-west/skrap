@@ -1,0 +1,312 @@
+@import "deploy/src/theme/common/prd-color-var.scss";
+
+.page-config {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.list-title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #202D40;
+}
+.config-widget {
+    position: relative;
+    padding-top: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: $--color-white;
+    overflow: auto;
+    &>.title {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: $--color-info-light;
+        color: white;
+        z-index: 2;
+        font-size: 12px;
+        padding: 0px 5px;
+    }
+}
+.page.config-widget {
+    width: 100%;
+    height: calc(100% - 50px);
+    &.one-screen-layout {
+        .dragArea.container {
+            display: flex;
+            flex-direction: column;
+            padding: 0px;
+        }
+
+    }
+}
+.dragArea.list-group {
+    width: 100%;
+    height: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    .region {
+        border: 2px solid $--color-info-light;
+        position: relative;
+        padding-top: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        overflow: auto;
+        .title {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: $--color-info-light;
+            color: white;
+            z-index: 2;
+            font-size: 12px;
+            padding: 0px 5px;
+        }
+    }
+}
+.left-panel {
+    width: 300px;
+    border-right: 10px solid $--background-color-base;
+    padding: 10px;
+    padding-right: 0px;
+    flex-shrink: 0;
+    overflow: auto;
+    .dragArea {
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 5px;
+    }
+    .list-group-item {
+        width: calc(50% - 10px);
+        height: 30px;
+        padding: 0px 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        background: $--background-color-base;
+        border: 1px solid $--background-color-base;
+        color: #202D40;
+        line-height: 30px;
+        cursor: pointer;
+        float: left;
+        .icon {
+            margin-right: 5px;
+            color: #2D84FB;
+        }
+    }
+    button.el-button.preview.el-button--text {
+        padding: 0px;
+        margin-right: 0px;
+    }
+}
+
+.middle-panel {
+    flex: 1;
+    border-right: 10px solid $--background-color-base;
+    overflow: hidden;
+    .panel-header {
+        height: 50px;
+        border-bottom: 10px solid $--background-color-base;
+        line-height: 40px;
+        padding: 0px 10px;
+        /deep/ button.el-button.el-button--text {
+            width: auto;
+            padding: 0px 0px;
+            color: #202D40;
+            &.save {
+                color: #2D84FB;
+            }
+            i {
+                vertical-align: baseline;
+            }
+            span {
+                margin-left: 0px;
+            }
+        }
+        .pos-left {
+            float: left;
+        }
+        .pos-right {
+            float: right;
+        }
+    }
+    .region.config-widget.drag-widget.form {
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    /deep/ .form.block {
+        .form-drag-container {
+            padding-left: 15px;
+            padding-top: 15px;
+            padding-right: 15px;
+            display: block;
+        }
+    }
+    /deep/ .form-drag-container {
+        border: 2px dashed $--border-color-base;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        &.attr-active {
+            background: #F5F7FA;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            z-index: 2;
+            display: none;
+        }
+    }
+    /deep/ form.el-form .dragArea {
+        min-height: 50px;
+        width: 100%;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        padding: 10px;
+        padding-top: 18px;
+        padding-bottom: 0px;
+    }
+    .table {
+        width: 100%;
+        height: 100%;
+    }
+    .graph {
+        height: 100%;
+        min-height: 100px;
+    }
+    /deep/ .attr-active {
+        border: 2px solid $--color-info-light !important;
+    }
+    .form-ghost {
+        display: inline-block;
+        border: 1px dashed red;
+        width: auto;
+        height: 32px;
+        line-height: 32px;
+        padding: 0px 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        vertical-align: top;
+    }
+    .generate-ghost {
+        border: 1px dashed red;
+        width: auto;
+        height: 32px;
+        line-height: 32px;
+        padding: 0px 10px;
+        margin-bottom: 10px;
+        vertical-align: top;
+    }
+    .el-form--inline .el-form-item__content {
+        width: auto;
+    }
+    /deep/ .el-form-item__label {
+        color: #606C80;
+    }
+    .config-widget.drag-widget.grid-layout /deep/ {
+        padding: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border: 0px;
+        overflow: hidden;
+        border: 2px solid rgba(0,0,0,.1);
+        background: #fafafa;
+        .el-row {
+            height: 100%;
+            .el-col {
+                height: 100%;
+                .grid-content {
+                    border: 2px solid rgba(0,0,0,.1);
+                    background: $--color-white;
+                    height: 100%;
+                    .region.config-widget.drag-widget.table {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+    .oper-button-group {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        vertical-align: top;
+        background: $--color-info-light;
+        color: white;
+        z-index: 10;
+        padding: 2px 5px;
+        display: none;
+    }
+    .attr-active>.oper-button-group {
+        display: block;
+    }
+}
+
+.right-panel {
+    width: 320px;
+    flex-shrink: 0;
+    position: relative;
+    /deep/ .el-textarea__inner {
+        font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
+        line-height: 16px;
+        white-space: pre;
+        font-size: 14px;
+    }
+    .el-tabs /deep/ {
+        height: 100%;
+        .el-tabs__header {
+            padding: 0px 10px;
+        }
+        .el-tabs__content {
+            padding: 0px 10px 10px 10px;
+            height: calc(100% - 60px);
+            overflow: auto;
+        }
+    }
+    /deep/ .el-form--label-top .el-form-item__label {
+        padding: 0 0 5px;
+        line-height: 20px;
+        color: #606C80;
+    }
+    /deep/ .el-form .el-form-item {
+        margin-bottom: 10px;
+    }
+    .field-container {
+        background: #f4f6fc;
+        margin-bottom: 10px;
+        padding: 8px;
+        padding-bottom: 1px;
+        position: relative;
+        cursor: pointer;
+        .uex-icon-delete {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+    }
+    .field-list>.title {
+        margin-bottom: 10px;
+        span.oper.uex-icon-plus-fill {
+            float: right;
+            line-height: 20px;
+            margin-right: 0px;
+        }
+    }
+    .oper {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,58 @@
+@import "../element-ui/src/common/var.scss";
+
+/* prd-theme-color */
+/* P0----Colors
+  -------------------------- */
+$--color-pp-5: mix(white, $--color-primary, 95%);
+$--color-pp-10: #E0EDFE;
+$--color-pp-45: mix(white, $--color-primary, 45%);
+/*$--color-pp-l: color($--color-primary) blend($--color-white) 15%));
+$--color-pp-b: color($--color-primary) blend($--color-black) 15%));*/
+$--color-pp-l: #48b1FB;
+$--color-pp-b: #0058A7;
+
+$--color-zxh-0: mix(white, $--color-black, 0%);
+$--color-zxh-4: mix(white, $--color-black, 4%);
+$--color-zxh-9: mix(white, $--color-black, 9%);
+$--color-zxh-15: mix(white, $--color-black, 15%);
+$--color-zxh-25: mix(white, $--color-black, 25%);
+$--color-zxh-45: mix(white, $--color-black, 45%);
+$--color-zxh-65: mix(white, $--color-black, 65%);
+$--color-zxh-85: mix(white, $--color-black, 85%);
+$--color-zxh-91: mix(white, $--color-black, 91%);
+$--color-zxh-100: mix(white, $--color-black, 100%);
+
+$--color-zxb-0: mix(black, $--color-white, 0%);
+$--color-zxb-2: mix(black, $--color-white, 2%);
+$--color-zxb-4: mix(black, $--color-white, 4%);
+$--color-zxb-9: mix(black, $--color-white, 9%);
+$--color-zxb-15: mix(black, $--color-white, 15%);
+$--color-zxb-25: mix(black, $--color-white, 25%);
+$--color-zxb-45: mix(black, $--color-white, 45%);
+$--color-zxb-65: mix(black, $--color-white, 65%);
+$--color-zxb-85: mix(black, $--color-white, 85%);
+$--color-zxb-100: mix(black, $--color-white, 0%);
+/*$--color-zxb-15-zxh-45: ZXB-15%+ZXH-45*/
+$--color-zxb-15-zxh-45: #eaeaea;
+$--color-zxb-white: mix(black, $--color-white, 0%);;
+
+$--color-primary-light: #E0EDFE;
+$--color-primary-active: mix(black, $--color-primary, 15%);
+$--color-primary-hover: mix(white, $--color-primary, 15%);
+$--color-primary-focus: mix(white, $--color-primary, 15%);
+
+$--color-success-active: mix(black, $--color-success, 15%);
+$--color-success-hover: mix(white, $--color-success, 15%);
+$--color-success-focus: mix(white, $--color-success, 15%);
+
+$--color-warning-active: mix(black, $--color-warning, 15%);
+$--color-warning-hover: mix(white, $--color-warning, 15%);
+$--color-warning-focus: mix(white, $--color-warning, 15%);
+
+$--color-danger-active: mix(black, $--color-danger, 15%);
+$--color-danger-hover: mix(white, $--color-danger, 15%);
+$--color-danger-focus: mix(white, $--color-danger, 15%);
+
+$--color-info-active: mix(black, $--color-info, 15%);
+$--color-info-hover: mix(white, $--color-info, 15%);
+$--color-info-focus: mix(white, $--color-info, 15%);

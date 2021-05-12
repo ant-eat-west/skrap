@@ -1,0 +1,41 @@
+@import "element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "element-ui/packages/theme-chalk/src/progress";
+@import "./common/var";
+
+@include b(upload) {
+    @include e(tip) {
+        color: $--color-text-ignore;
+    }
+    @include m(picture-card) {
+        border-radius: 1px;
+    }
+}
+
+@include b(upload-dragger) {
+    border: 2px dashed $--border-color-base;
+    border-radius: 1px;
+}
+
+@include b(upload-list) {
+    @include e(item) {
+        border-radius: 1px;
+    }
+    @include e(item-name) {
+        [class^="el-icon"] {
+            color: $--icon-color;
+        }
+
+    }
+    @include m(picture-card) {
+        .el-upload-list__item {
+            border-radius: 1px;
+        }
+
+    }
+    @include m(picture) {
+        .el-upload-list__item {
+            border-radius: 1px;
+        }
+
+    }
+}

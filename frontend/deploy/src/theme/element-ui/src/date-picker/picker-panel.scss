@@ -1,0 +1,31 @@
+@import "../common/var";
+
+@include b(picker-panel) {
+    @include e(icon-btn) {
+        margin-top: 10px;
+    }
+    @include e(link-btn) {
+        color: #2D84FB !important;
+        border-color: transparent !important;
+        background-color: transparent !important;
+        &:hover,
+        &:focus {
+            color: $--color-info-light !important;
+            border-color: transparent !important;
+            background-color: transparent !important;
+        }
+        &:active {
+            color: $--color-info-light !important;
+            border-color: transparent !important;
+            background-color: transparent !important;
+        }
+        &.is-disabled,
+        &.is-disabled:hover,
+        &.is-disabled:focus {
+            color: $--color-info-lighter !important;
+        }
+    }
+    .popper__arrow {
+        display: none !important;
+    }
+}

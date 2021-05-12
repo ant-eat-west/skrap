@@ -1,0 +1,154 @@
+@import "./common/prd-color-var.scss";
+
+
+@font-face {
+  font-family: 'uex-icon-new';
+  src:  url('fonts/uex-icon-new.eot?u6cb5k');
+  src:  url('fonts/uex-icon-new.eot?u6cb5k#iefix') format('embedded-opentype'),
+    url('fonts/uex-icon-new.ttf?u6cb5k') format('truetype'),
+    url('fonts/uex-icon-new.woff?u6cb5k') format('woff'),
+    url('fonts/uex-icon-new.svg?u6cb5k#uex-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="uex-icon-"], [class*=" uex-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'uex-icon-new' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.uex-icon-multidisciplinary:before {
+  content: "\e9ad";
+}
+.uex-icon-number:before {
+  content: "\e9b2";
+}
+.uex-icon-word-recognition:before {
+  content: "\e9c6";
+}
+.uex-icon-tab:before {
+  content: "\e9c7";
+}
+.uex-icon-dropdown:before {
+  content: "\e9d5";
+}
+.uex-icon-checkbox-dropdown:before {
+  content: "\e9da";
+}
+.uex-icon-singleline-text:before {
+  content: "\e9dc";
+}
+.uex-icon-multiline-text:before {
+  content: "\e9fd";
+}
+.uex-icon-editor:before {
+  content: "\ea01";
+}
+.uex-icon-zone-auto:before {
+  content: "\ea02";
+}
+.uex-icon-location:before {
+  content: "\ea30";
+}
+.uex-icon-html5:before {
+  content: "\ea71";
+}
+.uex-icon-splitline:before {
+  content: "\ea74";
+}
+.uex-icon-palette:before {
+  content: "\ea75";
+}
+.uex-icon-toggle:before {
+  content: "\ea76";
+}
+.uex-icon-chexkbox:before {
+  content: "\ea77";
+}
+.uex-icon-chexkbox-fill:before {
+  content: "\ea78";
+}
+.uex-icon-radio:before {
+  content: "\ea79";
+}
+.uex-icon-radio-fill:before {
+  content: "\ea7a";
+}
+.uex-icon-correct-fill:before {
+  content: "\ea7b";
+}
+.uex-icon-component:before {
+  content: "\e960";
+}
+.uex-icon-pin:before {
+  content: "\e98e";
+}
+.uex-icon-menu-mat:before {
+  content: "\e92f";
+}
+
+html, body, button, h1, h2, h3, h4, h5, h6, input {
+    font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+	overflow: hidden;
+	#app, .page-view {
+		width: 100%;
+		height: 100%;
+		color: $--color-text-regular;
+		background-color: $--color-white;
+		display: flex;
+		.app-menu {
+			width: 200px;
+			height: 100%;
+		}
+		.app-content {
+			height: 100%;
+			flex: 1;
+		}
+	}
+	.table, ul, label {
+	    margin-bottom: 0px;
+	}
+	.el-dropdown-menu {
+	    max-height: calc(100% - 100px);
+	    overflow-y: auto;
+	    overflow-x: hidden;
+	    .el-dropdown-menu__item {
+	    	white-space: nowrap;
+	    }
+	}
+	form.el-form.vertical {
+		.el-form-item__label {
+		    display: block;
+		    float: none;
+		    width: auto !important;
+		    text-align: left;
+		}
+		.el-form-item__content {
+		    margin-left: 0px !important;
+		}
+	}
+	dt, dd {
+	    line-height: inherit;
+	}
+	.el-tooltip__popper.tooltip-width-300 {
+        width: 300px;
+    }
+}

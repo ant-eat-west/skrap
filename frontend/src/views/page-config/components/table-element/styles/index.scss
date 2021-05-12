@@ -1,0 +1,12 @@
+@import "deploy/src/theme/common/prd-color-var.scss";
+
+.title {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: $--color-info-light;
+    color: white;
+    z-index: 2;
+    font-size: 12px;
+    padding: 0px 5px;
+}

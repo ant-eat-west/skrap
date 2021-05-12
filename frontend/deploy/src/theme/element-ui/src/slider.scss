@@ -1,0 +1,18 @@
+@import "element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "element-ui/packages/theme-chalk/src/mixins/utils";
+@import "./common/var.scss";
+
+@include b(slider) {
+    @include e(runway) {
+        &.disabled {
+            background-color: $--border-color-lighter;
+        }
+    }
+    @include e(input) {
+        margin-top: 2px;
+
+    }
+    @include e(button) {
+        border: solid 1px $--slider-main-background-color;
+    }
+}

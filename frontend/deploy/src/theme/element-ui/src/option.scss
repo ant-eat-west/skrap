@@ -1,0 +1,15 @@
+@import "element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "./common/var";
+
+@include b(select-dropdown) {
+    @include e(item) {
+        padding: 0 10px;
+        border-bottom: 1px solid $--border-color-lighter;
+        &.selected {
+            font-weight: normal;
+        }
+        &:last-child {
+            border-bottom: 0px;
+        }
+    }
+}

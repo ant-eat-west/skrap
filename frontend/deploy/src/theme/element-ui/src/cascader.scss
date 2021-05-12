@@ -1,0 +1,11 @@
+@import "element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "./common/var";
+@import "./cascader-panel";
+
+@include b(cascader) {
+    @include e(dropdown) {
+        .popper__arrow {
+            display: none !important;
+        }
+    }
+}

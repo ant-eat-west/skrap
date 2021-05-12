@@ -1,0 +1,5 @@
+@import "./common/var.scss";
+
+@include b(breadcrumb) {
+    font-size: $--font-size-base;
+}

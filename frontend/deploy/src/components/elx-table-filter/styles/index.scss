@@ -1,0 +1,140 @@
+@import "deploy/src/theme/common/prd-color-var.scss";
+@import "deploy/src/theme/common/size-var.scss";
+
+.elx-table-filter {
+	position: relative;
+	padding-top: 10px;
+    padding-left: 20px;
+	.saved-filters {
+		.button {
+		    width: 0px;
+		    height: 0px;
+		    border: 12px solid rgba($--color-primary, 0.15);
+		    border-bottom-color: transparent;
+		    border-right-color: transparent;
+		    position: absolute;
+		    padding: 0px;
+		    top: 0px;
+		    left: 0px;
+			span {
+			    position: absolute;
+			    top: -18px;
+			    left: -11px;
+			    font-size: 12px;
+			    color: $--color-primary;
+			}
+		}
+	}
+	.button {
+		width: 90px;
+		height: $--height;
+		color: $--color-text-regular;
+		display: inline-block;
+		line-height: $--height - 2;
+		border: 1px solid $--border-color-base;
+		border-radius: $--border-radius-base;
+		padding: 0px 10px;
+		cursor: pointer;
+		position: relative;
+		margin-right: 20px;
+		transition: .1s;
+		&.filter {
+			margin-bottom: 9px;
+			display: inline-block;
+    		padding: 0px 10px;
+		}
+		.ri-arrow-down-s-line {
+			color: $--color-text-placeholder;
+		}
+		.text {
+			vertical-align: top;
+			margin: 0px 5px;
+		}
+		.ri-add-line {
+		}
+		.drop-down {
+		    position: absolute;
+		    top: 50px;
+		    left: 0px;
+		    z-index: 1000;
+		    background: #fff;
+		    padding: 0px;
+		    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
+		    .el-checkbox {
+		    	margin-right: 0px;
+		    }
+		    li {
+		    	padding: 0px 15px;
+		    	white-space: nowrap;
+		    	height: 40px;
+	    		line-height: 40px;
+	    		border-bottom: 1px solid #F0F2F5;
+	    		box-sizing: content-box;
+		    	&.search {
+		    		background: #f5f7fa;
+		    		border-bottom: 1px solid $--border-color-base;
+		    		.el-input {
+		    			vertical-align: top;
+		    			input {
+	    					min-width: 173px;
+	    				}
+		    		}
+		    	}
+		    	&.clear {
+		    		color: $--icon-color;
+		    		.text {
+		    			margin-left: 10px;
+		    		}
+		    		&:hover {
+		    		}
+		    	}
+		    	.el-checkbox {
+		    		font-weight: normal;
+		    	}
+		    	&:hover {
+		    		background: #F5F7FA;
+		    	}
+		    	&:last-child {
+		    		border-bottom: 0px;
+		    	}
+		    }
+		}
+	}
+	.elx-table-filter-field {
+	    display: inline-block;
+	    vertical-align: top;
+	    margin-bottom: 9px;
+    	margin-right: 30px;
+	    label.elx-table-filter-field-label {
+       		float: none;
+    		display: inline-block;
+        	text-align: right;
+    		vertical-align: middle;
+    		line-height: $--height;
+    		margin-right: 15px;
+    		color: $--icon-color;
+		}
+		.elx-table-filter-field-content {
+    		display: inline-block;
+    		vertical-align: top;
+		}
+		span.uex-icon-error {
+			color: $--color-text-placeholder;
+    		margin-left: 5px;
+    		cursor: pointer;
+		}
+	}
+	.ri-save-3-fill {
+		color: $--color-primary;
+		margin-right: 10px;
+		cursor: pointer;
+		line-height: $--height;
+		margin-bottom: 9px;
+	}
+	.ri-restart-line {
+		color: $--color-primary;
+		cursor: pointer;
+		line-height: $--height;
+		margin-bottom: 9px;
+	}
+}

@@ -1,0 +1,8 @@
+@import "element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "./common/var";
+
+@include b(select-dropdown) {
+    .popper__arrow {
+        display: none !important;
+    }
+}

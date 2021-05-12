@@ -1,0 +1,46 @@
+@import "deploy/src/theme/common/prd-color-var.scss";
+@import "deploy/src/theme/common/size-var.scss";
+
+.elx-tag {
+	background: $--color-primary-light;
+    color: $--color-primary;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 22px;
+    padding-right: 20px;
+    padding-left: 10px;
+    width: auto;
+    display: inline-block;
+    white-space: nowrap;
+    .circle {
+    	width: 6px;
+	    height: 6px;
+	    background: $--color-primary;
+	    display: inline-block;
+	    border-radius: 50%;
+	    vertical-align: top;
+    	margin-top: 8px
+    }
+    &.success {
+    	background: $--color-success-extra-light;
+    	color: $--color-success;
+    	.circle {
+    		background: $--color-success;
+    	}
+    }
+    &.warning {
+    	background: $--color-warning-extra-light;
+    	color: $--color-warning;
+    	.circle {
+    		background: $--color-warning;
+    	}
+    }
+    &.danger {
+    	background: $--color-danger-extra-light;
+    	color: $--color-danger;
+    	.circle {
+    		background: $--color-danger;
+    	}
+    }
+}

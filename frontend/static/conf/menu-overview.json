@@ -1,0 +1,154 @@
+[{
+	"modelcode": "安全管控",
+    "modelname": "安全管控",
+    "icon": "uex-icon-stream",
+    "url": "",
+    "children": [{
+    	"modelcode": "敏感数据管理",
+    	"modelname": "敏感数据管理"
+    }, {
+    	"modelcode": "数据安全加固",
+    	"modelname": "数据安全加固"
+    }]
+}, {
+	"modelcode": "数据目录",
+    "modelname": "数据目录",
+    "icon": "uex-icon-stream",
+    "url": "",
+    "children": [{
+    	"modelcode": "数据资产目录",
+    	"modelname": "数据资产目录"
+    }, {
+    	"modelcode": "数据资产地图",
+    	"modelname": "数据资产地图"
+    }, {
+    	"modelcode": "数据资源目录",
+    	"modelname": "数据资源目录"
+    }, {
+        "modelcode": "重点业务目录",
+        "modelname": "重点业务目录"
+    }]
+}, {
+	"modelcode": "数据采集与交换",
+    "modelname": "数据采集与交换",
+    "icon": "uex-icon-stream",
+    "url": "",
+    "children": [{
+    	"modelcode": "单元管理",
+    	"modelname": "单元管理"
+    }, {
+    	"modelcode": "配置管理",
+    	"modelname": "配置管理"
+    }, {
+    	"modelcode": "集群管理",
+    	"modelname": "集群管理"
+    }, {
+        "modelcode": "单元监控",
+        "modelname": "单元监控"
+    }]
+}, {
+	"modelcode": "数据开发",
+    "modelname": "数据开发",
+    "icon": "uex-icon-stream",
+    "url": "",
+    "children": [{
+    	"modelcode": "开发者中心",
+    	"modelname": "开发者中心"
+    }, {
+    	"modelcode": "数据开发",
+    	"modelname": "数据开发"
+    }, {
+    	"modelcode": "数据查询",
+    	"modelname": "数据查询"
+    }, {
+        "modelcode": "任务调度",
+        "modelname": "任务调度"
+    }]
+}, {
+	"modelcode": "任务调度",
+    "modelname": "任务调度",
+    "icon": "uex-icon-stream",
+    "url": "",
+    "children": [{
+    	"modelcode": "任务监控",
+    	"modelname": "任务监控"
+    }, {
+    	"modelcode": "配置管理",
+    	"modelname": "配置管理"
+    }, {
+    	"modelcode": "资源诊断",
+    	"modelname": "资源诊断"
+    }, {
+        "modelcode": "平台监控",
+        "modelname": "平台监控"
+    }]
+}, {
+	"modelcode": "数据服务",
+    "modelname": "数据服务",
+    "icon": "uex-icon-stream",
+    "url": "",
+    "children": [{
+    	"modelcode": "开放运营管理",
+    	"modelname": "开放运营管理"
+    }, {
+    	"modelcode": "API管理",
+    	"modelname": "API管理"
+    }, {
+    	"modelcode": "API授权管理",
+    	"modelname": "API授权管理"
+    }, {
+        "modelcode": "用户管理",
+        "modelname": "用户管理"
+    }]
+}, {
+	"modelcode": "数据治理",
+    "modelname": "数据治理",
+    "icon": "uex-icon-stream",
+    "url": "",
+    "children": [{
+    	"modelcode": "规划设计",
+    	"modelname": "规划设计"
+    }, {
+    	"modelcode": "元数据治理",
+    	"modelname": "元数据治理"
+    }, {
+    	"modelcode": "数据标准",
+    	"modelname": "数据标准"
+    }, {
+        "modelcode": "数据质量",
+        "modelname": "数据质量"
+    }]
+}, {
+	"modelcode": "多租户管理",
+    "modelname": "多租户管理",
+    "icon": "uex-icon-stream",
+    "url": "",
+    "children": [{
+    	"modelcode": "团队管理",
+    	"modelname": "团队管理"
+    }, {
+    	"modelcode": "资源管理",
+    	"modelname": "资源管理"
+    }, {
+    	"modelcode": "项目管理",
+    	"modelname": "项目管理"
+    }]
+}, {
+	"modelcode": "系统管理",
+    "modelname": "系统管理",
+    "icon": "uex-icon-stream",
+    "url": "",
+    "children": [{
+    	"modelcode": "用户管理",
+    	"modelname": "用户管理"
+    }, {
+    	"modelcode": "角色管理",
+    	"modelname": "角色管理"
+    }, {
+    	"modelcode": "系统监控",
+    	"modelname": "系统监控"
+    }, {
+        "modelcode": "菜单管理",
+        "modelname": "菜单管理"
+    }]
+}]

@@ -1,0 +1,35 @@
+.field-list {
+    .field-title {
+        margin-bottom: 8px;
+    }
+    .field-label{
+        margin-bottom: 5px;
+        color: #202D40;
+        padding: 5px;
+    }
+    .field-container {
+        background: #f4f6fc;
+        margin-bottom: 10px;
+        padding: 8px;
+        padding-bottom: 1px;
+        position: relative;
+        cursor: pointer;
+        .m-colorPicker {
+            top: 2px;
+            left: 5px;
+        }
+        .color-label {
+            display: inline-block;
+            margin-left: 5px;
+        }
+    }
+}
+.more-config {
+    text-align: right;
+    font-size: 12px;
+    color: #606C80;
+    &>span:hover{
+        cursor: pointer;
+        color: #202D40;
+    }
+}

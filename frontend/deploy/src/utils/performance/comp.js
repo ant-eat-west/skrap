@@ -1,0 +1,23 @@
+var dur = [
+    'navigationStart',
+    'unloadEventStart',
+    'unloadEventEnd',
+    'redirectStart',
+    'redirectEnd',
+    'fetchStart',
+    'domainLookupStart',
+    'domainLookupEnd',
+    'connectStart',
+    'connectEnd',
+    'secureConnectionStart',
+    'requestStart',
+    'responseStart',
+    'responseEnd',
+    'domLoading',
+    'domInteractive',
+    'domContentLoadedEventStar',
+    'domContentLoadedEventEnd',
+    'domComplete',
+    'loadEventStart',
+    'loadEventEnd'
+];

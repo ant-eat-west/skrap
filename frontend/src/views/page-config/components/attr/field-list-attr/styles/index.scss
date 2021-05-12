@@ -1,0 +1,50 @@
+.field-list-attr {
+    .field-list-title {
+        display: flex;
+        padding: 0px 40px 0px 30px;
+        width: 100%;
+        background: #f4f6fc;
+        line-height: 30px;
+        color: #202D40;
+        margin-bottom: 2px;
+        span {
+            display: block;
+            flex: 1;
+        }
+    }
+	.field-container {
+        background: #f4f6fc;
+        margin-bottom: 2px;
+        padding: 5px;
+        padding-bottom: 5px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        .el-input {
+            margin-right: 5px;
+        }
+        .oper {
+            margin-right: 5px;
+            line-height: 30px;
+        }
+        .uex-icon-delete {
+            margin-right: 0px;
+        }
+    }
+    &>.title {
+        margin-bottom: 10px;
+        span.oper.uex-icon-plus-fill {
+            float: right;
+            line-height: 20px;
+            margin-right: 0px;
+        }
+        i.ri-refresh-fill {
+            vertical-align: middle;
+        }
+    }
+	.oper {
+		cursor: pointer;
+	}
+	i.ri-drag-move-2-line.draggable {
+	}
+}

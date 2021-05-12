@@ -1,0 +1,112 @@
+1、分模块部署
+
+    主仓库子仓库分模块部署
+
+    main 主仓库
+    └── conf
+        ├── dev-service-config.json  开发环境下子仓库业务线主文件路径
+        └── prod-service-config.json   生产环境下子仓库业务线主文件路径
+
+    主仓库读取配置文件中各个子仓库的主文件后，子仓库主文件将自己仓库中的路由和store注册到主仓库中
+
+2、前端工程规范文件规范
+
+    ├── conf  配置文件json
+    ├── sub_modules  子仓库文件夹
+    └── deploy    公共文件夹
+        └── build    webpack配置
+            ├── loader    加载器
+            ├── plugin    插件
+            ├── define.js    编译后文件名以及文件路径定义
+            ├── gem-component-file.js    用于生成组件说明文档
+            ├── getFilePath.js    获取文件路径
+            ├── port.json    定义端口
+            ├── webpack.common.conf.js    webpack公共配置
+            ├── webpack.dev.conf.js    webpack 工程开发环境下配置
+            ├── webpack.prod.conf.js    webpack 工程生产环境下配置
+            ├── webpack.test.js    webpack 工程测试环境下配置
+            ├── webpack.inter.dev.conf.js    webpack 模块开发环境下配置
+            └── webpack.inter.prod.conf.js    webpack 模块生产环境下配置
+        └── src
+            └── assets  项目静态资源
+                ├── icons  自定义图标资源
+                └── images  图片资源
+            ├── http  http统一拦截等
+            ├── router 路由
+            ├── store Vuex store
+            ├── theme 主题文件
+            ├── utils 封装工具函数
+            ├── i18n  国际化语言文件
+            ├── App.vue
+            ├── entry.js
+            ├── inter.js
+            ├── Page.vue
+            ├── plugin.js
+    └── dacp-meta-web    基础工程web文件夹
+        ├── dist  项目构建结果输出目录
+        ├── test  测试用例目录
+        └── src
+            └── assets  项目静态资源
+                ├── icons  自定义图标资源
+                └── images  图片资源
+            ├── components  公共组件
+            ├── router  路由配置
+            ├── theme  主题文件
+            ├── i18n  国际化语言文件
+            └── views  页面文件
+                └── ds-create  例子数据源创建
+                    ├── api  api统一管理
+                    ├── components  页面组件
+                    ├── store  组件store
+                    └── styles 样式文件
+                        └── DsCreate.vue 页面主文件
+
+3、二次开发代码规范
+
+```
+<component-template>
+    将.vue文件中的<template>替换为<component-template>
+</component-template>
+<component-name>
+    为组件的name和componentName
+</component-name>
+<component-comment>
+    为组件的中文说明
+</component-comment>
+```
+
+4、http代理
+
+    webpack.dev.conf.js
+
+    {
+        devServer: {
+            proxy: {
+                '/metamodel': 'http://192.168.1.128:8080',
+                '/enum': 'http://192.168.1.128:8080',
+                //'/metamodel': 'http://yapi.demo.qunar.com/mock/56436',
+                //'/enum': 'http://yapi.demo.qunar.com/mock/56436'
+                '/users': '/http://localhost:3000/mock/11'
+            }
+        }
+    }
+
+5、如何新增一个页面
+
+    dacp-meta-web -->> views -->> 新增页面文件夹 例子为ds-create
+    dacp-meta-web -->> router -->> routes.js 增加自己页面的路由
+
+    （1）例子 用户登陆  user-login
+    （2）例子 用户管理  user-mgr
+
+6、代码规范遵循 eslint报的错
+
+7、测试用例
+    dacp-meta-web -->> test
+
+8、组件样式污染
+<style scoped>
+
+</style>
+
+9、组件内部api统一管理

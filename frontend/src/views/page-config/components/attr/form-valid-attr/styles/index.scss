@@ -1,0 +1,30 @@
+.el-form-item.rules {
+    /deep/ .el-checkbox {
+        margin-bottom: 5px;
+        width: 100%;
+        margin-right: 0px;
+        span.el-checkbox__input {
+            vertical-align: top;
+            line-height: 30px;
+        }
+        .el-select {
+            .el-input {
+                margin-top: 0px;
+            }
+        }
+        .el-input {
+            display: block;
+            width: 100%;
+            &.message{
+                 margin-top: 5px;
+            }
+        }
+        span.el-checkbox__label {
+            width: calc(100% - 50px);
+            vertical-align: top;
+            &>div.label {
+                line-height: 24px;
+            }
+        }
+    }
+}

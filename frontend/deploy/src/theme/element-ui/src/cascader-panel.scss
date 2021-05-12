@@ -1,0 +1,23 @@
+@import "element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "./common/var";
+
+@include b(cascader-menu) {
+    @include e(list) {
+        padding: 0px 0;
+    }
+
+}
+@include b(cascader-node) {
+    padding: 0 15px 0 5px;
+    height: $--large-height;
+    line-height: $--large-height;
+    border-bottom: 1px solid $--border-color-lighter;
+    &.in-active-path,
+    &.is-selectable.in-checked-path,
+    &.is-active {
+        font-weight: normal;
+    }
+    @include e(postfix) {
+        color: $--color-text-placeholder;
+    }
+}

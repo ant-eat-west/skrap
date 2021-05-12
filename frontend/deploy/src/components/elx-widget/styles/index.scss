@@ -1,0 +1,31 @@
+.elx-widget {
+	width: 100%;
+	height: 100%;
+	.header {
+	    font-weight: 600;
+	    height: 50px;
+	    line-height: 50px;
+	    padding: 0px 25px;
+	    .title {
+	    	color: #202D40;
+	    }
+	    .el-dropdown {
+		    float: right;
+		    .el-icon-more {
+		    	color: #495465;
+		    	cursor: pointer;
+		    }
+		}
+	}
+	.content {
+		width: 100%;
+		height: calc(100% - 50px);
+		padding: 10px 25px;
+		padding-bottom: 25px;
+		overflow: hidden;
+		&>div {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
